@@ -15,3 +15,9 @@ public:
     }
 };
 
+int main() {
+    derivedClass a;
+    a.perkenalkan1();
+
+    return 0;
+}
