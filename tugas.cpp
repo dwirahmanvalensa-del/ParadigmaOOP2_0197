@@ -28,3 +28,14 @@ public:
     }
 };
 
+class RekeningKonvensional : public RekeningBank {
+public:
+    RekeningKonvensional(string no, double saldoAwal) : RekeningBank(no, saldoAwal) {}
+
+    void potongAdmin() override {
+        double admin = 15000;
+        saldo -= admin; 
+        cout << "Rekening Konvensional: Dipotong biaya admin Rp " << admin << endl;
+    }
+};
+
