@@ -56,3 +56,30 @@ public:
     }
 };
 
+int main() {
+    RekeningBank* akun;
+
+    RekeningSyariah tabunganSyariah("CACA-001", 500000);
+    akun = &tabunganSyariah;
+    akun->tampilkanInfo();
+    akun->potongAdmin();
+    akun->tampilkanInfo();
+    
+    cout << "--------------------------------------------" << endl;
+
+    RekeningKonvensional tabunganKonvensional("MARICA-002", 2000000);
+    akun = &tabunganKonvensional;
+    akun->tampilkanInfo();
+    akun->potongAdmin();
+    akun->tampilkanInfo();
+
+    cout << "--------------------------------------------" << endl;
+
+    RekeningPremium tabunganPremium("VALENSA-003", 5000000);
+    akun = &tabunganPremium;
+    akun->tampilkanInfo();
+    akun->potongAdmin();
+    akun->tampilkanInfo();
+
+    return 0;
+}
